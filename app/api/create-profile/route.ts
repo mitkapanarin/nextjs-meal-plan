@@ -41,7 +41,7 @@ export async function POST() {
       { message: "Profile created successfully" },
       { status: 201 }
     );
-  } catch (error: any) {
+  } catch (e: unknown) {
     return NextResponse.json({ error: "Internal error" }, { status: 500 });
   }
 }
