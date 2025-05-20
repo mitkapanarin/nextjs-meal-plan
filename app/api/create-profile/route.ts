@@ -2,7 +2,7 @@ import { currentUser } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 
-export async function Post() {
+export async function POST() {
   try {
     const clerkUser = await currentUser();
     if (!clerkUser) {
